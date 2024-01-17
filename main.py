@@ -6,7 +6,7 @@ url="https://dfmye9ryu8rat.cloudfront.net/orionCipherFlow.txt"
 r=requests.get(url)
 soup=BeautifulSoup(r.text,'html')
 with open("demo.txt", "w", encoding='utf-8') as file:
-    file.write(str(soup.div))
+    file.write(str(soup.get_text()))
 f = open("demo.txt", "r") # storing the content from a url into the file and saving it as mentioned in first part
 
 # Now Decoding part
